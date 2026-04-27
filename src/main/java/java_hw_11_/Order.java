@@ -34,7 +34,7 @@ public abstract class Order implements Pricable, Printable {
     public void setStatus(String status) {
         try {
             if (!(status.equals("NEW") || status.equals("COMPLETED") || status.equals("CANCELED"))) {
-                throw new InvalidOrderStatusException("Invalid order`s status!");
+                throw new InvalidOrderStatusException("You chose Invalid order`s status!");
             }
             this.status = status;
         }catch (InvalidOrderStatusException ex){
