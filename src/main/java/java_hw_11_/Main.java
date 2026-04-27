@@ -32,7 +32,7 @@ public class Main {
 
         System.out.println(totalBill.getOrderTypeCounts());
 
-        System.out.println(totalBill.calculateTotal());
+        System.out.println("Total bill for all orders: UAH "+totalBill.calculateTotal());
 
 
 
