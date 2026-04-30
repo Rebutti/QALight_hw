@@ -29,7 +29,7 @@ public class OrderManager {
                 throw new NoOrdersException("No orders in the bill!");
             }
             for (int i = 0; i < this.orders.size(); i++) {
-                if (this.orders.get(i).getStatus().equals("NEW")) {
+                if (this.orders.get(i).getStatus() == OrderStatus.NEW) {
                     sumOfPrices += this.orders.get(i).getPrice();
                 }
             }

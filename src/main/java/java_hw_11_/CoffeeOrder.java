@@ -1,29 +1,29 @@
 package java_hw_11_;
 
 public class CoffeeOrder extends Order {
-    private String size;
+    private CoffeeSize size;
 
     public double getPrice() {
         switch (this.size) {
-            case "S":
+            case CoffeeSize.S:
                 return 34;
-            case "M":
+            case CoffeeSize.M:
                 return 39;
-            case "L":
+            case CoffeeSize.L:
                 return 44;
         }
         return 0;
     }
 
-    public String getSize() {
+    public CoffeeSize getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(CoffeeSize size) {
         this.size = size;
     }
 
-    public CoffeeOrder(String size) {
+    public CoffeeOrder(CoffeeSize size) {
         this.size = size;
     }
 

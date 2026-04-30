@@ -1,17 +1,17 @@
 package java_hw_11_;
 
 public class TeaOrder extends Order {
-    private String type;
+    private TeaType type;
 
-    public String getType() {
+    public TeaType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(TeaType type) {
         this.type = type;
     }
 
-    public TeaOrder(String type) {
+    public TeaOrder(TeaType type) {
         this.type = type;
     }
 
@@ -22,11 +22,11 @@ public class TeaOrder extends Order {
 
     public double getPrice(){
         switch (this.type) {
-            case "black":
+            case TeaType.BLACK:
                 return 37;
-            case "green":
+            case TeaType.GREEN:
                 return 35;
-            case "herbal":
+            case TeaType.HERBAL:
                 return 40;
         }
         return 0;

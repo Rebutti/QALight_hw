@@ -1,26 +1,26 @@
 package java_hw_11_;
 
 public class DessertOrder extends Order {
-    private String dessertName;
+    private DessertName dessertName;
 
-    public String getDessertName() {
+    public DessertName getDessertName() {
         return dessertName;
     }
 
-    public void setDessertName(String dessertName) {
+    public void setDessertName(DessertName dessertName) {
         this.dessertName = dessertName;
     }
 
-    public DessertOrder(String dessertName) {
+    public DessertOrder(DessertName dessertName) {
         this.dessertName = dessertName;
     }
     public double getPrice(){
         switch (this.dessertName) {
-            case "cake":
+            case DessertName.CAKE:
                 return 300;
-            case "pancake":
+            case DessertName.PANCAKE:
                 return 250;
-            case "candies":
+            case DessertName.CANDIES:
                 return 51;
         }
         return 0;

@@ -1,21 +1,16 @@
 package java_hw_11_;
 
 import java_hw_11_.own_exceptions.InvalidOrderStatusException;
-
 import java.util.Random;
 
 public abstract class Order implements Pricable, Printable {
     private long orderNumber;
-    private String status;
+    private OrderStatus status;
     Random random = new Random();
-
-//    public Order() {
-//        this.orderNumber = Math.abs(random.nextLong());
-//    }
 
     public Order() {
         this.orderNumber = Math.abs(random.nextLong());
-        this.status = "NEW";
+        this.status = OrderStatus.NEW;
     }
 
 
@@ -23,7 +18,7 @@ public abstract class Order implements Pricable, Printable {
         return this.orderNumber;
     }
 
-    public String getStatus() {
+    public OrderStatus getStatus() {
         return status;
     }
 
@@ -31,18 +26,17 @@ public abstract class Order implements Pricable, Printable {
         this.orderNumber = orderNumber;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(OrderStatus status) {
         try {
-            if (!(status.equals("NEW") || status.equals("COMPLETED") || status.equals("CANCELED"))) {
+            if (!(status == OrderStatus.NEW || status == OrderStatus.CANCELED || status == OrderStatus.COMPLETED)) {
                 throw new InvalidOrderStatusException("Invalid order`s status!");
             }
             this.status = status;
         }catch (InvalidOrderStatusException ex){
             ex.printStackTrace();
         }
-
+        this.status = status;
     }
-
 
     @Override
     public String toString() {
