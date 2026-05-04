@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Order latte = new CoffeeOrder("L");
+        Order latte = new CoffeeOrder("LARGE");
         Order greenTea = new TeaOrder("green");
         Order cake = new DessertOrder("cake");
         Order cake2 = new DessertOrder("pancake");

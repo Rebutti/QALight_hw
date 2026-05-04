@@ -1,5 +1,7 @@
 package java_hw_11_;
 
+import java_hw_11_.enums.TeaType;
+
 public class TeaOrder extends Order {
     private TeaType type;
 

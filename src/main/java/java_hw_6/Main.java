@@ -3,7 +3,7 @@ package java_hw_6;
 public class Main {
     public static void main(String[] args) {
 ////        Order order = new Order(123);
-//        Order latte = new CoffeeOrder("L");
+//        Order latte = new CoffeeOrder("LARGE");
 ////        System.out.println(latte.getPrice());
 //        Order greenTea = new TeaOrder("green");
 ////        System.out.println(greenTea.getOrderNumber() + " " + greenTea.getPrice());

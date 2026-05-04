@@ -1,4 +1,4 @@
-package java_hw_11_;
+package java_hw_11_.enums;
 
 public enum TeaType {
 

@@ -1,5 +1,6 @@
 package java_hw_11_;
 
+import java_hw_11_.enums.OrderStatus;
 import java_hw_11_.own_exceptions.InvalidOrderStatusException;
 import java.util.Random;
 

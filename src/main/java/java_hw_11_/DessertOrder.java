@@ -1,5 +1,7 @@
 package java_hw_11_;
 
+import java_hw_11_.enums.DessertName;
+
 public class DessertOrder extends Order {
     private DessertName dessertName;
 

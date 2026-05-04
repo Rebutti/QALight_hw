@@ -1,10 +1,15 @@
 package java_hw_11_;
 
+import java_hw_11_.enums.CoffeeSize;
+import java_hw_11_.enums.DessertName;
+import java_hw_11_.enums.OrderStatus;
+import java_hw_11_.enums.TeaType;
+
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Order latte = new CoffeeOrder(CoffeeSize.L);
+        Order latte = new CoffeeOrder(CoffeeSize.LARGE);
         Order greenTea = new TeaOrder(TeaType.GREEN);
         Order cake = new DessertOrder(DessertName.CAKE);
         Order cake2 = new DessertOrder(DessertName.PANCAKE);

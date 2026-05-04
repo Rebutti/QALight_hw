@@ -1,6 +1,7 @@
 package java_hw_11_;
 
 
+import java_hw_11_.enums.OrderStatus;
 import java_hw_11_.own_exceptions.DuplicateOrderException;
 import java_hw_11_.own_exceptions.NoOrdersException;
 import java_hw_11_.own_exceptions.OrderNotFoundException;
