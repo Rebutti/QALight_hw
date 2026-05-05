@@ -1,6 +1,7 @@
 package java_hw_11_;
 
 
+import java_hw_11_.enums.OrderStatus;
 import java_hw_11_.own_exceptions.DuplicateOrderException;
 import java_hw_11_.own_exceptions.NoOrdersException;
 import java_hw_11_.own_exceptions.OrderNotFoundException;
@@ -29,7 +30,7 @@ public class OrderManager {
                 throw new NoOrdersException("No orders in the bill!");
             }
             for (int i = 0; i < this.orders.size(); i++) {
-                if (this.orders.get(i).getStatus().equals("NEW")) {
+                if (this.orders.get(i).getStatus() == OrderStatus.NEW) {
                     sumOfPrices += this.orders.get(i).getPrice();
                 }
             }

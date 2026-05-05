@@ -1,29 +1,31 @@
 package java_hw_11_;
 
+import java_hw_11_.enums.CoffeeSize;
+
 public class CoffeeOrder extends Order {
-    private String size;
+    private CoffeeSize size;
 
     public double getPrice() {
         switch (this.size) {
-            case "S":
+            case SMALL:
                 return 34;
-            case "M":
+            case MEDIUM:
                 return 39;
-            case "L":
+            case LARGE:
                 return 44;
         }
         return 0;
     }
 
-    public String getSize() {
+    public CoffeeSize getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(CoffeeSize size) {
         this.size = size;
     }
 
-    public CoffeeOrder(String size) {
+    public CoffeeOrder(CoffeeSize size) {
         this.size = size;
     }
 

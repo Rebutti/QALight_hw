@@ -9,7 +9,7 @@ public class ConsoleManager {
 
     public String billGetter() {
         int meal;
-        String coffeeSize = "S";
+        String coffeeSize = "SMALL";
         String teaType = "green";
         String dessert = "cake";
         int customerSize;
@@ -19,19 +19,19 @@ public class ConsoleManager {
             meal = sc.nextInt();
             switch (meal) {
                 case 1:
-                    System.out.println("Choose coffee size:\n1-S (UAH 34)\n2-M (UAH 39)\n3-L (UAH 44)");
+                    System.out.println("Choose coffee size:\n1-SMALL (UAH 34)\n2-MEDIUM (UAH 39)\n3-LARGE (UAH 44)");
                     customerSize = sc.nextInt();
                     switch (customerSize) {
                         case 1:
-                            coffeeSize = "S";
+                            coffeeSize = "SMALL";
                             orders.add(new CoffeeOrder(coffeeSize));
                             continue;
                         case 2:
-                            coffeeSize = "M";
+                            coffeeSize = "MEDIUM";
                             orders.add(new CoffeeOrder(coffeeSize));
                             continue;
                         case 3:
-                            coffeeSize = "L";
+                            coffeeSize = "LARGE";
                             orders.add(new CoffeeOrder(coffeeSize));
                             continue;
                     }

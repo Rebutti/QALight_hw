@@ -1,26 +1,28 @@
 package java_hw_11_;
 
-public class DessertOrder extends Order {
-    private String dessertName;
+import java_hw_11_.enums.DessertName;
 
-    public String getDessertName() {
+public class DessertOrder extends Order {
+    private DessertName dessertName;
+
+    public DessertName getDessertName() {
         return dessertName;
     }
 
-    public void setDessertName(String dessertName) {
+    public void setDessertName(DessertName dessertName) {
         this.dessertName = dessertName;
     }
 
-    public DessertOrder(String dessertName) {
+    public DessertOrder(DessertName dessertName) {
         this.dessertName = dessertName;
     }
     public double getPrice(){
         switch (this.dessertName) {
-            case "cake":
+            case CAKE:
                 return 300;
-            case "pancake":
+            case PANCAKE:
                 return 250;
-            case "candies":
+            case CANDIES:
                 return 51;
         }
         return 0;

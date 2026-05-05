@@ -1,17 +1,20 @@
 package java_hw_11_;
 
+import java_hw_11_.enums.CoffeeSize;
+import java_hw_11_.enums.DessertName;
+import java_hw_11_.enums.OrderStatus;
+import java_hw_11_.enums.TeaType;
+
 import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        Order latte = new CoffeeOrder("L");
-        Order greenTea = new TeaOrder("green");
-        Order cake = new DessertOrder("cake");
-        Order cake2 = new DessertOrder("pancake");
-        Order cake3 = new DessertOrder("candies");
+        Order latte = new CoffeeOrder(CoffeeSize.LARGE);
+        Order greenTea = new TeaOrder(TeaType.GREEN);
+        Order cake = new DessertOrder(DessertName.CAKE);
+        Order cake2 = new DessertOrder(DessertName.PANCAKE);
+        Order cake3 = new DessertOrder(DessertName.CANDIES);
         OrderManager totalBill = new OrderManager(new ArrayList<>());
-
-        System.out.println(totalBill.calculateTotal());
 
         cake3.setOrderNumber((long) cake2.getOrderNumber());
 
@@ -22,7 +25,7 @@ public class Main {
         totalBill.addOrder(cake3);
         totalBill.removeOrderByNumber(123);
         totalBill.findOrderByNumber(123);
-        cake.setStatus("CANCELED2");
+        cake.setStatus(OrderStatus.CANCELED);
 
         latte.printOrderInfo();
         greenTea.printOrderInfo();
