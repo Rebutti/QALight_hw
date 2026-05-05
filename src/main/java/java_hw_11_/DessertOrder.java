@@ -18,11 +18,11 @@ public class DessertOrder extends Order {
     }
     public double getPrice(){
         switch (this.dessertName) {
-            case DessertName.CAKE:
+            case CAKE:
                 return 300;
-            case DessertName.PANCAKE:
+            case PANCAKE:
                 return 250;
-            case DessertName.CANDIES:
+            case CANDIES:
                 return 51;
         }
         return 0;

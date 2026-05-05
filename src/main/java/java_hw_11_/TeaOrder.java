@@ -24,11 +24,11 @@ public class TeaOrder extends Order {
 
     public double getPrice(){
         switch (this.type) {
-            case TeaType.BLACK:
+            case BLACK:
                 return 37;
-            case TeaType.GREEN:
+            case GREEN:
                 return 35;
-            case TeaType.HERBAL:
+            case HERBAL:
                 return 40;
         }
         return 0;

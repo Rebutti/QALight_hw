@@ -7,11 +7,11 @@ public class CoffeeOrder extends Order {
 
     public double getPrice() {
         switch (this.size) {
-            case CoffeeSize.SMALL:
+            case SMALL:
                 return 34;
-            case CoffeeSize.MEDIUM:
+            case MEDIUM:
                 return 39;
-            case CoffeeSize.LARGE:
+            case LARGE:
                 return 44;
         }
         return 0;
