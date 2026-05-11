@@ -15,18 +15,13 @@ public class WishPopUpVisibilityVerification {
         String searchWord = "apple watch";
         WebDriver driver = new ChromeDriver();
         try {
-
             driver.get("https://hotline.ua");
             sleep(3000);
             driver.manage().window().maximize();
-
             WebElement wishListButton = driver.findElement(By.xpath("//div[@class = 'hidden-below-xl'] //div[@class = 'button__icon flex']"));
             wishListButton.click();
-
-
             WebElement wishListPopUp = driver.findElement(By.xpath("//div[contains(@class, 'my-lists__section')]"));
             Assert.assertTrue("Wish list popup isn`t displayed ",wishListPopUp.isDisplayed());
-
             sleep(3000);
         } finally {
             driver.quit();

@@ -15,20 +15,14 @@ public class VodafoneUITextTest {
         WebDriver driver = new ChromeDriver();
         String checkedText = "Home internet";
         try {
-
             driver.get("https://www.vodafone.ua/");
             driver.manage().window().maximize();
             sleep(3000);
-
             WebElement engLanguageBtn = driver.findElement(By.xpath("//div[@class = 'language__item']"));
             engLanguageBtn.click();
             sleep(3000);
-
             String homeInternetText = driver.findElement(By.xpath("//div[contains(text(), 'Home internet')]")).getText();
-
-            Assert.assertEquals(format("The button 'Home internet' has incorrect title <%s>", homeInternetText),checkedText, homeInternetText);
-
-
+            Assert.assertEquals(format("The button 'Home internet' has incorrect title <%s>", homeInternetText), checkedText, homeInternetText);
         } finally {
             driver.quit();
         }
