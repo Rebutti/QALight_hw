@@ -16,7 +16,6 @@ public class PriceValidator {
     public static void main(String[] args) throws InterruptedException {
         String searchWord = "Samsung Galaxy S24";
         WebDriver driver = new ChromeDriver();
-        Actions actions = new Actions(driver);
         try {
             driver.get("https://hotline.ua");
             sleep(3000);
@@ -29,7 +28,6 @@ public class PriceValidator {
             firstPhone.click();
             sleep(10000);
             List<WebElement> phonePrices = driver.findElements(By.xpath("//div[@class = 'many__price']//span[@style]"));
-            WebElement phonePrice = driver.findElement(By.xpath("//div[@class = 'many__price']//span[@style]"));
             long lowPrice = Long.parseLong(phonePrices.get(0).getText().replace(" ", ""));
             long highPrice = Long.parseLong(phonePrices.get(1).getText().replace(" ", ""));
             if (lowPrice > highPrice) {

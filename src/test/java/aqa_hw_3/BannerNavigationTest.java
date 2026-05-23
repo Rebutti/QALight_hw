@@ -16,14 +16,12 @@ public class BannerNavigationTest {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         String testUrl = "https://hotline.ua/";
-        Actions actions = new Actions(driver);
         try {
             driver.get(testUrl);
             sleep(3000);
             driver.manage().window().maximize();
             List<WebElement> categoriesBtns = driver.findElements(By.xpath(" //div[@class = 'categories-section__inner'] //a"));
-            int amountOfElements = categoriesBtns.size();
-            for (int i = 0; i < amountOfElements; i++) {
+            for (int i = 0; i < categoriesBtns.size(); i++) {
                 categoriesBtns = driver.findElements(By.xpath(" //div[@class = 'categories-section__inner'] //a"));
                 categoriesBtns.get(i).click();
                 sleep(1000);
