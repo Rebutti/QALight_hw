@@ -1,6 +1,5 @@
 package aqa_hw_3;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import static java.lang.Thread.sleep;
 
-public class openProductInNewTabTest {
+public class OpenProductInNewTabTest {
 
     public static void main(String[] args) throws InterruptedException {
         String searchWord = "Samsung Galaxy S24";

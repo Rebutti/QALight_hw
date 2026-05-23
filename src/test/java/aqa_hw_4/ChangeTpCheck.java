@@ -1,6 +1,5 @@
 package aqa_hw_4;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -15,7 +14,7 @@ import java.util.List;
 import static java.lang.String.format;
 import static java.lang.Thread.sleep;
 
-public class changeTpCheck {
+public class ChangeTpCheck {
     public static void main(String[] args) throws InterruptedException {
         WebDriver driver = new ChromeDriver();
         FluentWait<WebDriver> waiter = new FluentWait<>(driver)

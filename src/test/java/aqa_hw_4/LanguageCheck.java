@@ -11,7 +11,7 @@ import java.time.Duration;
 import static java.lang.String.format;
 import static java.lang.Thread.sleep;
 
-public class languageCheck {
+public class LanguageCheck {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         String checkedText = "Home internet";
@@ -27,7 +27,5 @@ public class languageCheck {
         } finally {
             driver.quit();
         }
-
-
     }
 }
