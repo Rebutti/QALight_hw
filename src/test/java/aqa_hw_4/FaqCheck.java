@@ -4,13 +4,12 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
 import static java.lang.Thread.sleep;
 
-public class faqCheck {
+public class FaqCheck {
     public static void main(String[] args ) throws InterruptedException{
         WebDriver driver = new ChromeDriver();
         FluentWait<WebDriver> waiter = new FluentWait<>(driver)

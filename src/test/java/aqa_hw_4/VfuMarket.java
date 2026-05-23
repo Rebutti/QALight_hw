@@ -1,6 +1,5 @@
 package aqa_hw_4;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
@@ -11,9 +10,9 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static java.lang.String.format;
 
-public class vfuMarket {
+
+public class VfuMarket {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
         WebDriverWait waiter = new WebDriverWait(driver, Duration.ofSeconds(5));

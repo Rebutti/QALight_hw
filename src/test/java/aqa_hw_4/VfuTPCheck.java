@@ -12,7 +12,7 @@ import java.time.Duration;
 
 import static java.lang.String.format;
 
-public class vfuTPCheck {
+public class VfuTPCheck {
 
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
