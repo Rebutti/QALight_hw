@@ -1,5 +1,6 @@
 package java_hw_19;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,6 +20,7 @@ public class LoginPage {
         waiter = new WebDriverWait(this.driver, Duration.ofSeconds(5));
     }
 
+    @Step("Fill <{email}> to the email field")
     public void loginFieldSendKeys(String email) {
         By emailFieldXpath = By.xpath("//input[@inputmode]");
         waiter.until(ExpectedConditions.visibilityOfElementLocated(emailFieldXpath));
@@ -26,10 +28,11 @@ public class LoginPage {
         emailField.sendKeys(email);
     }
 
-    public void passwordFieldSendKeys(String email) {
+    @Step("Fill <{pass}> to the password field")
+    public void passwordFieldSendKeys(String pass) {
         By passwordFieldXpath = By.xpath("//input[@placeholder='Пароль']");
         waiter.until(ExpectedConditions.visibilityOfElementLocated(passwordFieldXpath));
         WebElement passwordField = driver.findElement(passwordFieldXpath);
-        passwordField.sendKeys(email);
+        passwordField.sendKeys(pass);
     }
 }

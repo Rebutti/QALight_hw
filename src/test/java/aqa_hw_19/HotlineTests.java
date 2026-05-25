@@ -2,8 +2,7 @@ package aqa_hw_19;
 
 
 import aqa_hw_19.dataprovider.ProvideData;
-import io.qameta.allure.Description;
-import io.qameta.allure.Epic;
+import io.qameta.allure.*;
 import java_hw_19.*;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -13,6 +12,8 @@ public class HotlineTests extends BaseTestHotLine {
     @Test
     @Description("product comparison test on the the search result page and the wish list page")
     @Epic("Comparison test")
+    @Story("Wish List Page")
+    @Feature("Product name on wish list page")
     public void comparizedProductTest() {
         String searchedProduct = "Apple watch";
         int productIndex = 2;
@@ -38,6 +39,9 @@ public class HotlineTests extends BaseTestHotLine {
     @Test
     @Description("product`s price comparison test on the the search result page and the PDP")
     @Epic("Comparison test")
+    @Story("Product Page")
+    @Issue("Jira-123456")
+    @Link(name = "Requirements", url = "https://hotline.ua/")
     public void comparizedPriceProductTest() {
         String searchedProduct = "Mac";
         int productIndex = 2;
@@ -57,6 +61,7 @@ public class HotlineTests extends BaseTestHotLine {
     @Test(dataProvider = "getSearchData", dataProviderClass = ProvideData.class)
     @Description("checking login and password input fields test")
     @Epic("Login tests")
+    @Story("Login Page")
     public void login(String email, String pass) {
 
         HomePage login = new HomePage(getDriver());
@@ -69,6 +74,7 @@ public class HotlineTests extends BaseTestHotLine {
     @Test
     @Description("product title comparison  test on the the product description page and the wish list page")
     @Epic("Comparison test")
+    @Story("Wish List Page")
     public void checkHeartBtnOnPDP() {
         String searchedProduct = "Samsung";
         int productIndex = 4;

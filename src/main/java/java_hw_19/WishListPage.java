@@ -1,5 +1,6 @@
 package java_hw_19;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -18,6 +19,7 @@ public class WishListPage {
         waiter = new WebDriverWait(this.driver, Duration.ofSeconds(5));
     }
 
+    @Step("Get product name on the WLP")
     public String getProductName() {
         By productNameXpath = By.xpath("//div[@class='list-item list-item--row list-item--row--profile']//div[@class='list-item__info']//a[@class='item-title text-md link link--black']");
         waiter.until(ExpectedConditions.visibilityOfElementLocated(productNameXpath));
