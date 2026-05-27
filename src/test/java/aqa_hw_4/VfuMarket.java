@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-import static java.lang.String.format;
-
 public class VfuMarket {
     public static void main(String[] args) {
         WebDriver driver = new ChromeDriver();
