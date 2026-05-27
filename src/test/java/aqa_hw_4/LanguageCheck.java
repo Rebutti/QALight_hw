@@ -27,7 +27,5 @@ public class LanguageCheck {
         } finally {
             driver.quit();
         }
-
-
     }
 }
