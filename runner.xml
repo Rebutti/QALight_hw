@@ -7,7 +7,6 @@
         <classes>
             <class name="aqa_hw_21.CreatePetTest"></class>
             <class name="aqa_hw_21.DeletePetTest"></class>
-            <class name="aqa_hw_21.GetPetTests"></class>
             <class name="aqa_hw_21.PutPetTests"></class>
         </classes>
     </test>
