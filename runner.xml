@@ -1,0 +1,13 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="SeleniumTestSuite" parallel="tests" verbose="1">
+
+    <test name="SmokeTests">
+        <classes>
+            <class name="aqa_hw_21.CreatePetTest"></class>
+            <class name="aqa_hw_21.DeletePetTest"></class>
+            <class name="aqa_hw_21.PutPetTests"></class>
+        </classes>
+    </test>
+</suite>

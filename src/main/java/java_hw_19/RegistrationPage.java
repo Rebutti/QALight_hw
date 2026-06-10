@@ -9,13 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class LoginPage {
+
+public class RegistrationPage {
 
     private WebDriver driver;
 
     private WebDriverWait waiter;
 
-    public LoginPage(WebDriver driver) {
+    public RegistrationPage(WebDriver driver) {
         this.driver = driver;
         waiter = new WebDriverWait(this.driver, Duration.ofSeconds(5));
     }
@@ -36,11 +37,12 @@ public class LoginPage {
         passwordField.sendKeys(pass);
     }
 
-    @Step("Click on the registration button")
-    public void registrationBtnClick() {
-        By registrationBtnXpath = By.xpath("//a[@class='template-page__link']");
-        waiter.until(ExpectedConditions.visibilityOfElementLocated(registrationBtnXpath));
-        WebElement registrationBtn = driver.findElement(registrationBtnXpath);
-        registrationBtn.click();
+    @Step("Fill <{name}> to the password field")
+    public void nameFieldSendKeys(String name) {
+        By nameFieldXpath = By.xpath("//input[@id='name']");
+        waiter.until(ExpectedConditions.visibilityOfElementLocated(nameFieldXpath));
+        WebElement passwordField = driver.findElement(nameFieldXpath);
+        passwordField.sendKeys(name);
     }
+
 }
